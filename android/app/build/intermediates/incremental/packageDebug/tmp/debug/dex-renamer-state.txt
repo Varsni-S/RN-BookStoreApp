@@ -1,0 +1,4 @@
+#Sun Dec 26 21:33:58 IST 2021
+base.0=/home/varsni/Downloads/REACTNATIVE-BOOK-STORE-main (1)/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/varsni/Downloads/REACTNATIVE-BOOK-STORE-main (1)/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-it/values-it.xml",
+            "outputFile": "/home/varsni/Downloads/ReactNative-BookStoreApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-it/values-it.xml",
             "map": [
                 {
                     "source": "/home/varsni/.gradle/caches/transforms-2/files-2.1/d7a5f80ecac4ee5cbf87954ebea90513/biometric-1.1.0/res/values-it/values-it.xml",

@@ -19,31 +19,43 @@ import { Title } from "react-native-paper";
 import { useDispatch, useSelector } from "react-redux";
 import { EditProfileAction } from "../redux/action";
 
-
-export default function EditProfile({navigation}) {
+export default function EditProfile({ navigation }) {
   const [fullname, setFullName] = useState("");
   const [phonenumber, setPhoneNumber] = useState("");
   const [email, setEmail] = useState("");
   const [statecountry, setStateCountry] = useState("");
-  const USER_DETAILS = useSelector(state=>state.USER_DETAILS);
+  const USER_DETAILS = useSelector((state) => state.USER_DETAILS);
   const dispatch = useDispatch();
-    
-  const submit =()=>{
-    if(fullname == "" || phonenumber == "" || email == "" || statecountry == ""){
+
+  const submit = () => {
+    if (
+      fullname == "" ||
+      phonenumber == "" ||
+      email == "" ||
+      statecountry == ""
+    ) {
       alert("FILL ALL DETAILS !!!");
-  }else {
-
-      dispatch(EditProfileAction({wordName:fullname,number:phonenumber,email:email,statecountry:statecountry}));
-      navigation.navigate("Profile")
-      setFullName("");setEmail("");setPhoneNumber("");setStateCountry("");
+    } else {
+      dispatch(
+        EditProfileAction({
+          wordName: fullname,
+          number: phonenumber,
+          email: email,
+          statecountry: statecountry,
+        })
+      );
+      navigation.navigate("Profile");
+      setFullName("");
+      setEmail("");
+      setPhoneNumber("");
+      setStateCountry("");
     }
-  }
-
+  };
 
   return (
     <View style={styles.container}>
       <View style={{ alignItems: "center" }} backgroundColor="#382a38">
-        <Title style={{ color: "#f5f5f5", paddingTop: 8 }}>EDIT PROFILE</Title>
+        <Title style={{ color: "#f5f5f5", paddingTop: 8 }}>Edit Profile</Title>
         <TouchableOpacity>
           <View
             style={{
@@ -170,7 +182,7 @@ export default function EditProfile({navigation}) {
           />
         </View>
 
-        <TouchableOpacity style={styles.commandButton} onPress={()=>submit()}>
+        <TouchableOpacity style={styles.commandButton} onPress={() => submit()}>
           <Text style={styles.panelButtonTitle}>Submit</Text>
         </TouchableOpacity>
       </View>
